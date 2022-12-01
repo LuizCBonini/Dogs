@@ -5,8 +5,8 @@ import styles from './App.css'
 
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
-import Home from './Components/Pages/Home/Home';
-import Login from './Components/Pages/Login/Login';
+import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
 
 const App = () => {
   return <div>
