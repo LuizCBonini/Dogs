@@ -1,7 +1,5 @@
 import React from 'react'
 
-import styles from './Home.module.css'
-
 // components
 import Feed from '../../Components/Feed/Feed'
 
