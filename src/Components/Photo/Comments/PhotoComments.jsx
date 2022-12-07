@@ -7,6 +7,7 @@ import PhotoCommentsForm from './PhotoCommentsForm'
 import styles from './PhotoComments.module.css'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const PhotoComments = (props) => {
 
@@ -25,7 +26,8 @@ const PhotoComments = (props) => {
       <ul ref={commentsSection} className={styles.comments}>
         {comments.map(comment => 
           <li key={comment.comment_ID}>
-            <strong>{comment.comment_author}: </strong>
+            {/* <strong>{comment.comment_author}: </strong> */}
+            <strong><Link to={`/perfil/${comment.comment_author}`}>@{comment.comment_author}: </Link> </strong>
             <span>{comment.comment_content}</span>
           </li>
         )}
