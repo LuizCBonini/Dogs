@@ -5,9 +5,10 @@ import { UserContext } from '../../UserContext'
 
 const ProtectedRoute = ({children}) => {
 
-    const {login} = useContext(UserContext)
+    // const {login} = useContext(UserContext)
+    const token = window.localStorage.getItem('token')
 
-  return login ? children : <Navigate to="/login"/>;
+  return token ? children : <Navigate to="/login"/>;
 }
 
 export default ProtectedRoute
