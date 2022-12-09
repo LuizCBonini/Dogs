@@ -5,7 +5,7 @@ import useFetch from '../../../Hooks/useFetch'
 import Error from '../../../Components/Helper/Error'
 import { useEffect } from 'react'
 import { PHOTOS_GET } from '../../../api'
-import Loading from '../../../Components/Helper/Loading'
+import Loading from '../../Helper/Loading/Loading'
 
 import styles from './FeedPhotos.module.css'
 
