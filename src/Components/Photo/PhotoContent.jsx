@@ -7,14 +7,14 @@ import PhotoComments from './Comments/PhotoComments';
 import styles from './PhotoContent.module.css'
 import PhotoDelete from './PhotoDelete/PhotoDelete';
 
-const PhotoContent = ({data}) => {
+const PhotoContent = ({data, single}) => {
 
     const user = useContext(UserContext)
 
     const {photo, comments} = data;
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : 'aquiiiiii'}`}>
         <div className={styles.img}>
             <Image src={photo.src} alt={photo.title} />
         </div>
@@ -38,7 +38,7 @@ const PhotoContent = ({data}) => {
                 </ul>
             </div>
         </div>
-        <PhotoComments id={photo.id} comments={comments}/>
+        <PhotoComments single={single} id={photo.id} comments={comments}/>
     </div>
   )
 }
