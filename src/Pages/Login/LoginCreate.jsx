@@ -17,7 +17,6 @@ const LoginCreate = () => {
 
   const {userLogin} = useContext(UserContext)
   const {loading, error, request} = useFetch()
-  console.log(error)
 
   async function handleSubmit(event) {
     event.preventDefault();
